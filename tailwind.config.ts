@@ -26,7 +26,8 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
-					foreground: 'hsl(var(--primary-foreground))'
+					foreground: 'hsl(var(--primary-foreground))',
+					hover: 'hsl(var(--primary-hover))'
 				},
 				secondary: {
 					DEFAULT: 'hsl(var(--secondary))',
@@ -52,6 +53,13 @@ export default {
 					DEFAULT: 'hsl(var(--card))',
 					foreground: 'hsl(var(--card-foreground))'
 				},
+				'real-estate': {
+					blue: 'hsl(var(--real-estate-blue))',
+					teal: 'hsl(var(--real-estate-teal))',
+					navy: 'hsl(var(--real-estate-navy))',
+					light: 'hsl(var(--real-estate-light))',
+					gold: 'hsl(var(--real-estate-gold))'
+				},
 				sidebar: {
 					DEFAULT: 'hsl(var(--sidebar-background))',
 					foreground: 'hsl(var(--sidebar-foreground))',
@@ -67,6 +75,21 @@ export default {
 				lg: 'var(--radius)',
 				md: 'calc(var(--radius) - 2px)',
 				sm: 'calc(var(--radius) - 4px)'
+			},
+			backgroundImage: {
+				'gradient-hero': 'var(--gradient-hero)',
+				'gradient-card': 'var(--gradient-card)', 
+				'gradient-accent': 'var(--gradient-accent)'
+			},
+			boxShadow: {
+				'soft': 'var(--shadow-soft)',
+				'medium': 'var(--shadow-medium)',
+				'strong': 'var(--shadow-strong)',
+				'glow': 'var(--shadow-glow)'
+			},
+			transitionTimingFunction: {
+				'smooth': 'var(--transition-smooth)',
+				'spring': 'var(--transition-spring)'
 			},
 			keyframes: {
 				'accordion-down': {
@@ -84,11 +107,31 @@ export default {
 					to: {
 						height: '0'
 					}
+				},
+				'slide-up': {
+					from: {
+						opacity: '0',
+						transform: 'translateY(30px)'
+					},
+					to: {
+						opacity: '1',
+						transform: 'translateY(0)'
+					}
+				},
+				'fade-in': {
+					from: {
+						opacity: '0'
+					},
+					to: {
+						opacity: '1'
+					}
 				}
 			},
 			animation: {
 				'accordion-down': 'accordion-down 0.2s ease-out',
-				'accordion-up': 'accordion-up 0.2s ease-out'
+				'accordion-up': 'accordion-up 0.2s ease-out',
+				'slide-up': 'slide-up 0.6s cubic-bezier(0.16, 1, 0.3, 1)',
+				'fade-in': 'fade-in 0.8s ease-out'
 			}
 		}
 	},
